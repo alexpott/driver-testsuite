@@ -51,7 +51,6 @@ class NavigationTest extends TestCase
 
         $this->getSession()->visit($this->pathTo('/links.html'));
         $page = $this->getSession()->getPage();
-        $this->assertSame('', $page->getContent());
         $link = $page->findLink('basic form image');
 
         $this->assertNotNull($link);
